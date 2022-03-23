@@ -51,18 +51,35 @@ public class Dashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(12, 28, 59));
+        jPanel1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+
+        jButton1.setBackground(new java.awt.Color(45, 43, 177));
+        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton1.setText("TASK MANAGER");
 
+        jButton2.setBackground(new java.awt.Color(45, 43, 177));
+        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton2.setText("DASHBOARD");
 
+        jButton3.setBackground(new java.awt.Color(45, 43, 177));
+        jButton3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton3.setText("IN PROGRESS");
 
+        jButton4.setBackground(new java.awt.Color(45, 43, 177));
+        jButton4.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton4.setText("IN REVIEW");
 
+        jButton5.setBackground(new java.awt.Color(45, 43, 177));
+        jButton5.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton5.setText("REVISION");
 
+        jButton6.setBackground(new java.awt.Color(45, 43, 177));
+        jButton6.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton6.setText("COMPLETED");
 
+        jButton7.setBackground(new java.awt.Color(45, 43, 177));
+        jButton7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton7.setText("PROFILE");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -99,22 +116,36 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(0, 46, Short.MAX_VALUE))
         );
 
+        jButton8.setBackground(new java.awt.Color(45, 43, 177));
+        jButton8.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 0, 204));
         jLabel1.setText("Balance:KES 4500");
 
+        jButton14.setBackground(new java.awt.Color(45, 43, 177));
+        jButton14.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton14.setText("English");
 
+        jButton15.setBackground(new java.awt.Color(45, 43, 177));
+        jButton15.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton15.setText("Literature");
 
+        jButton16.setBackground(new java.awt.Color(45, 43, 177));
+        jButton16.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton16.setText("Programming");
 
+        jButton17.setBackground(new java.awt.Color(45, 43, 177));
+        jButton17.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton17.setText("Humanities");
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 0, 204));
         jLabel2.setText("Subjects");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -151,12 +182,20 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
         );
 
+        jButton10.setBackground(new java.awt.Color(45, 43, 177));
+        jButton10.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton10.setText("IN PROGRESS 10");
 
+        jButton11.setBackground(new java.awt.Color(45, 43, 177));
+        jButton11.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton11.setText("IN REVIEW 15");
 
+        jButton12.setBackground(new java.awt.Color(45, 43, 177));
+        jButton12.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton12.setText("COMPLETED 12");
 
+        jButton13.setBackground(new java.awt.Color(45, 43, 177));
+        jButton13.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton13.setText("REVISION 2");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -181,7 +220,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -195,6 +234,8 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setBackground(new java.awt.Color(45, 43, 177));
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jLabel3.setText("Writer");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -217,7 +258,7 @@ public class Dashboard extends javax.swing.JFrame {
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 133, Short.MAX_VALUE))
+                        .addGap(0, 122, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(Writer, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -229,11 +270,12 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(Writer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(Writer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3)))
                 .addGap(36, 36, 36)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
