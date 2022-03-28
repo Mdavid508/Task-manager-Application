@@ -8,14 +8,30 @@
  * @author San
  */
 public class EmployerDashboard extends javax.swing.JFrame {
-
+  Employer employer = null;
+  String[] options = {"this.employer.firstName", "Logout"};
     /**
      * Creates new form EmployerDashboard
      */
-    public EmployerDashboard() {
-        initComponents();
-    }
+    public EmployerDashboard(){
+        this.initComponents();
+        this.initProfile();
+        this.initMyMethods();
+    }   
 
+    
+    public void initProfile(){
+       
+    }
+    public void initMyMethods(){
+        
+        
+        jComboBoxProfile.setSelectedIndex(0);
+        jComboBoxProfile.setModel(new javax.swing.DefaultComboBoxModel<>(options));
+   
+        
+    }
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,17 +46,17 @@ public class EmployerDashboard extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btnDashboard = new javax.swing.JButton();
+        btnSubmitted = new javax.swing.JButton();
+        btnAssignTaskMenu = new javax.swing.JButton();
+        btnPendingTasks = new javax.swing.JButton();
+        btnMyWriters = new javax.swing.JButton();
+        btnProfile = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnAssignTask = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBoxProfile = new javax.swing.JComboBox<>();
 
         jLabel2.setText("jLabel2");
 
@@ -67,35 +83,35 @@ public class EmployerDashboard extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("TASK MANAGER");
 
-        jButton2.setBackground(new java.awt.Color(0, 51, 255));
-        jButton2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("DASHBOARD");
+        btnDashboard.setBackground(new java.awt.Color(0, 51, 255));
+        btnDashboard.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnDashboard.setForeground(new java.awt.Color(255, 255, 255));
+        btnDashboard.setText("DASHBOARD");
 
-        jButton3.setBackground(new java.awt.Color(0, 51, 255));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("SUBMITTED");
+        btnSubmitted.setBackground(new java.awt.Color(0, 51, 255));
+        btnSubmitted.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnSubmitted.setForeground(new java.awt.Color(255, 255, 255));
+        btnSubmitted.setText("SUBMITTED");
 
-        jButton4.setBackground(new java.awt.Color(0, 51, 255));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("ASSIGN TASKS");
+        btnAssignTaskMenu.setBackground(new java.awt.Color(0, 51, 255));
+        btnAssignTaskMenu.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnAssignTaskMenu.setForeground(new java.awt.Color(255, 255, 255));
+        btnAssignTaskMenu.setText("ASSIGN TASKS");
 
-        jButton5.setBackground(new java.awt.Color(0, 51, 255));
-        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("PENDING TASKS");
+        btnPendingTasks.setBackground(new java.awt.Color(0, 51, 255));
+        btnPendingTasks.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnPendingTasks.setForeground(new java.awt.Color(255, 255, 255));
+        btnPendingTasks.setText("PENDING TASKS");
 
-        jButton6.setBackground(new java.awt.Color(0, 51, 255));
-        jButton6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("MY WRITERS");
+        btnMyWriters.setBackground(new java.awt.Color(0, 51, 255));
+        btnMyWriters.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnMyWriters.setForeground(new java.awt.Color(255, 255, 255));
+        btnMyWriters.setText("MY WRITERS");
 
-        jButton7.setBackground(new java.awt.Color(0, 51, 255));
-        jButton7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("PROFILE");
+        btnProfile.setBackground(new java.awt.Color(0, 51, 255));
+        btnProfile.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnProfile.setForeground(new java.awt.Color(255, 255, 255));
+        btnProfile.setText("PROFILE");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -111,16 +127,16 @@ public class EmployerDashboard extends javax.swing.JFrame {
                                 .addComponent(jLabel1))
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jButton4)))
+                                .addComponent(btnAssignTaskMenu)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnProfile, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnPendingTasks, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnSubmitted, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnMyWriters, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(16, 16, 16))
         );
         jPanel5Layout.setVerticalGroup(
@@ -131,30 +147,30 @@ public class EmployerDashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addComponent(btnDashboard)
                 .addGap(27, 27, 27)
-                .addComponent(jButton3)
+                .addComponent(btnSubmitted)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(btnAssignTaskMenu)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(btnPendingTasks)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(btnMyWriters)
                 .addGap(18, 18, 18)
-                .addComponent(jButton7)
+                .addComponent(btnProfile)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setForeground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setBackground(new java.awt.Color(0, 51, 255));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ASSIGN TASKS");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAssignTask.setBackground(new java.awt.Color(0, 51, 255));
+        btnAssignTask.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        btnAssignTask.setForeground(new java.awt.Color(255, 255, 255));
+        btnAssignTask.setText("ASSIGN TASKS");
+        btnAssignTask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAssignTaskActionPerformed(evt);
             }
         });
 
@@ -181,7 +197,7 @@ public class EmployerDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(149, 149, 149)
-                        .addComponent(jButton1))
+                        .addComponent(btnAssignTask))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -193,7 +209,7 @@ public class EmployerDashboard extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
-                .addComponent(jButton1)
+                .addComponent(btnAssignTask)
                 .addGap(65, 65, 65)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -201,10 +217,10 @@ public class EmployerDashboard extends javax.swing.JFrame {
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employer" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxProfile.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employer" }));
+        jComboBoxProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBoxProfileActionPerformed(evt);
             }
         });
 
@@ -218,7 +234,7 @@ public class EmployerDashboard extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(301, 301, 301)
-                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jComboBoxProfile, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -227,7 +243,7 @@ public class EmployerDashboard extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBoxProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -236,17 +252,17 @@ public class EmployerDashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBoxProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxProfileActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBoxProfileActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAssignTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignTaskActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAssignTaskActionPerformed
 
     /**
      * @param args the command line arguments
@@ -284,14 +300,14 @@ public class EmployerDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton btnAssignTask;
+    private javax.swing.JButton btnAssignTaskMenu;
+    private javax.swing.JButton btnDashboard;
+    private javax.swing.JButton btnMyWriters;
+    private javax.swing.JButton btnPendingTasks;
+    private javax.swing.JButton btnProfile;
+    private javax.swing.JButton btnSubmitted;
+    private javax.swing.JComboBox<String> jComboBoxProfile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel4;
