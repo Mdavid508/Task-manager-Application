@@ -1,11 +1,10 @@
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
-import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-
+import java.sql.SQLException;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -35,13 +34,12 @@ public class EmployerRegistration extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        textArea1 = new java.awt.TextArea();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        JTlastName = new javax.swing.JTextField();
+        JTfirstName = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         JTemail = new javax.swing.JTextField();
@@ -49,9 +47,9 @@ public class EmployerRegistration extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         JTphone = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        JTcPassword = new javax.swing.JTextField();
+        btnRegister = new javax.swing.JButton();
+        JTpassword = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
 
         jLabel1.setText("EMPLOYER REGISTRATION");
@@ -79,7 +77,7 @@ public class EmployerRegistration extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addContainerGap())
         );
@@ -117,35 +115,19 @@ public class EmployerRegistration extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Password");
+        jLabel10.setText("Confirm Password");
 
-        JTpassword.addActionListener(new java.awt.event.ActionListener() {
+        JTcPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTpasswordActionPerformed(evt);
+                JTcPasswordActionPerformed(evt);
             }
         });
-
-        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Confirm Password");
 
         btnRegister.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnRegister.setText("REGISTER");
         btnRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegisterActionPerformed(evt);
-            }
-        });
-
-        JTlogin.setText("Already registred? Login here");
-        JTlogin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JTloginMouseClicked(evt);
-            }
-        });
-        JTlogin.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                JTloginKeyPressed(evt);
             }
         });
 
@@ -181,19 +163,19 @@ public class EmployerRegistration extends javax.swing.JFrame {
                                 .addGap(14, 14, 14)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(JTfirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(47, 47, 47)
                                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE))
-                            .addComponent(jTextField3)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPasswordField1))))
+                                .addComponent(JTlastName, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE))
+                            .addComponent(JTemail)
+                            .addComponent(JTphone)
+                            .addComponent(JTcPassword, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(JTpassword))))
                 .addGap(31, 81, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(286, 286, 286))
         );
         jPanel1Layout.setVerticalGroup(
@@ -207,29 +189,29 @@ public class EmployerRegistration extends javax.swing.JFrame {
                     .addComponent(JTlastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JTfirstName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(32, 32, 32)
+                .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                    .addComponent(jLabel7)
+                    .addComponent(JTemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel8))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(JTphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9))))
                 .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTcPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnRegister)
                 .addContainerGap(70, Short.MAX_VALUE))
         );
 
@@ -238,13 +220,16 @@ public class EmployerRegistration extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(21, 21, 21)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(61, 61, 61))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -258,12 +243,12 @@ public class EmployerRegistration extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JTlastNameActionPerformed
 
-    private void JTpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTpasswordActionPerformed
+    private void JTcPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTcPasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTpasswordActionPerformed
+    }//GEN-LAST:event_JTcPasswordActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-       //Employer registration
+        //Employer registration
        String firstName = JTfirstName.getText();
        String lastName = JTlastName.getText();
        String email = JTemail.getText();
@@ -281,7 +266,7 @@ public class EmployerRegistration extends javax.swing.JFrame {
             stmt.setString(4, email);
             stmt.setString(5, phone);
             stmt.setString(6, password);
-            
+
             int count = stmt.executeUpdate();
 
             if(count>0){
@@ -293,24 +278,13 @@ public class EmployerRegistration extends javax.swing.JFrame {
             }else{
                 JOptionPane.showMessageDialog(this, "There was an error registering you. Please try again", "Error", JOptionPane.ERROR_MESSAGE);
                 JTfirstName.requestFocus();
-              
+
             }
         } catch (SQLException ex) {
             Logger.getLogger(EmployerRegistration.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-           
+
     }//GEN-LAST:event_btnRegisterActionPerformed
-
-    private void JTloginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_JTloginKeyPressed
-       
-    }//GEN-LAST:event_JTloginKeyPressed
-
-    private void JTloginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTloginMouseClicked
-         //redirect to login page
-        this.setVisible(false);
-        new EmployerLogin().setVisible(true);
-    }//GEN-LAST:event_JTloginMouseClicked
 
     /**
      * @param args the command line arguments
@@ -349,13 +323,12 @@ public class EmployerRegistration extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField JTcPassword;
     private javax.swing.JTextField JTemail;
     private javax.swing.JTextField JTfirstName;
     private javax.swing.JTextField JTlastName;
-    private javax.swing.JLabel JTlogin;
     private javax.swing.JPasswordField JTpassword;
     private javax.swing.JTextField JTphone;
-    private javax.swing.JPasswordField TcPassword;
     private javax.swing.JButton btnRegister;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -369,11 +342,5 @@ public class EmployerRegistration extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
