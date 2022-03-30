@@ -23,8 +23,8 @@ public class Db {
     this.tableName = tableName;
     
       try {         
-          this.conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/taskmanager","root", "");
-   
+          this.conn = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3307/taskmanager","root", "");
+
       } catch (SQLException ex) {
           Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, ex);
           JOptionPane.showMessageDialog(new JFrame(), ex);
@@ -35,4 +35,8 @@ public class Db {
      return this.conn;
  }
  
+ public static void main(String[] args){
+     Db db = new Db("users");
+     db.getConnection();
+ }
 }

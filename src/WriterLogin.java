@@ -170,6 +170,7 @@ public class WriterLogin extends javax.swing.JFrame {
                this.setVisible(false);
                //move to writer dashboard
                Dashboard dashboard = new Dashboard();
+               
                dashboard.setVisible(true);
                
                return;

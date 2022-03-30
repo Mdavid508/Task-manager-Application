@@ -63,8 +63,8 @@ public class EmployerDashboard extends javax.swing.JFrame {
         btnProfile = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         btnAssignTask = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jComboBoxProfile = new javax.swing.JComboBox<>();
 
         jLabel2.setText("jLabel2");
@@ -96,31 +96,61 @@ public class EmployerDashboard extends javax.swing.JFrame {
         btnDashboard.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnDashboard.setForeground(new java.awt.Color(255, 255, 255));
         btnDashboard.setText("DASHBOARD");
+        btnDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDashboardActionPerformed(evt);
+            }
+        });
 
         btnSubmitted.setBackground(new java.awt.Color(0, 51, 255));
         btnSubmitted.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnSubmitted.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmitted.setText("SUBMITTED");
+        btnSubmitted.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmittedActionPerformed(evt);
+            }
+        });
 
         btnAssignTaskMenu.setBackground(new java.awt.Color(0, 51, 255));
         btnAssignTaskMenu.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnAssignTaskMenu.setForeground(new java.awt.Color(255, 255, 255));
         btnAssignTaskMenu.setText("ASSIGN TASKS");
+        btnAssignTaskMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAssignTaskMenuActionPerformed(evt);
+            }
+        });
 
         btnPendingTasks.setBackground(new java.awt.Color(0, 51, 255));
         btnPendingTasks.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnPendingTasks.setForeground(new java.awt.Color(255, 255, 255));
         btnPendingTasks.setText("PENDING ");
+        btnPendingTasks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPendingTasksActionPerformed(evt);
+            }
+        });
 
         btnMyWriters.setBackground(new java.awt.Color(0, 51, 255));
         btnMyWriters.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnMyWriters.setForeground(new java.awt.Color(255, 255, 255));
         btnMyWriters.setText("MY WRITERS");
+        btnMyWriters.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMyWritersActionPerformed(evt);
+            }
+        });
 
         btnProfile.setBackground(new java.awt.Color(0, 51, 255));
         btnProfile.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnProfile.setForeground(new java.awt.Color(255, 255, 255));
         btnProfile.setText("PROFILE");
+        btnProfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProfileActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -178,18 +208,17 @@ public class EmployerDashboard extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setBackground(new java.awt.Color(0, 51, 255));
-        jTextField1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField1.setText("      SUBMITTED TASKS 0");
-
-        jTextField2.setBackground(new java.awt.Color(0, 51, 255));
-        jTextField2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setText("      PENDING SUBMISSIONS 10");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("PENDING SUBMISSIONS");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("SUBMITTED");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -198,16 +227,15 @@ public class EmployerDashboard extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(btnAssignTask))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(149, 149, 149)
+                .addComponent(btnAssignTask)
+                .addContainerGap(195, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,8 +244,8 @@ public class EmployerDashboard extends javax.swing.JFrame {
                 .addComponent(btnAssignTask)
                 .addGap(65, 65, 65)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
@@ -235,14 +263,12 @@ public class EmployerDashboard extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(301, 301, 301)
-                        .addComponent(jComboBoxProfile, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addComponent(jComboBoxProfile, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,13 +293,62 @@ public class EmployerDashboard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jComboBoxProfileActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
-
     private void btnAssignTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignTaskActionPerformed
-        // TODO add your handling code here:
+        // directs you to assign task
+        this.setVisible(false);
+        Assigntask assigntask = new Assigntask();
+        assigntask.setVisible(true);
     }//GEN-LAST:event_btnAssignTaskActionPerformed
+
+    private void btnAssignTaskMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignTaskMenuActionPerformed
+        // directs you to assigntask
+        this.setVisible(false);
+        Assigntask assigntaskd =new Assigntask();
+        assigntaskd.setVisible(true);
+    }//GEN-LAST:event_btnAssignTaskMenuActionPerformed
+
+    private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfileActionPerformed
+        // directs the employer to their profile
+        this.setVisible(false);
+        Employersprofile profile = new Employersprofile();
+        profile.setVisible(true);
+    }//GEN-LAST:event_btnProfileActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnSubmittedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmittedActionPerformed
+        //directs the employer to the submitted task tab
+        this.setVisible(false);
+        Submittedtasks submittask = new Submittedtasks();
+        submittask.setVisible(true);
+    }//GEN-LAST:event_btnSubmittedActionPerformed
+
+    private void btnMyWritersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMyWritersActionPerformed
+        //directs the employer to the writers under them
+        this.setVisible(false);
+        Mywriters empwriters = new Mywriters();
+        empwriters.setVisible(true);
+    }//GEN-LAST:event_btnMyWritersActionPerformed
+
+    private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
+        // directs the employer back to the dashboard
+        this.setVisible(false);
+        EmployerDashboard empdboard = new EmployerDashboard();
+        empdboard.setVisible(true);
+    }//GEN-LAST:event_btnDashboardActionPerformed
+
+    private void btnPendingTasksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPendingTasksActionPerformed
+        // Directs the employer to the pending tasks
+        this.setVisible(false);
+        Pendingtasksemp pending = new Pendingtasksemp();
+        pending.setVisible(true);
+    }//GEN-LAST:event_btnPendingTasksActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Directs 
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -317,6 +392,8 @@ public class EmployerDashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnPendingTasks;
     private javax.swing.JButton btnProfile;
     private javax.swing.JButton btnSubmitted;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBoxProfile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -324,7 +401,5 @@ public class EmployerDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
