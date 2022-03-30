@@ -24,10 +24,17 @@ dependency-reduced-pom.xml
 ## NetBeans
 ##########################
 
+<<<<<<< HEAD
 /nbproject/private/
 /nbproject/
 /build/
 /nbbuild/
+=======
+nbproject/private/
+/nbproject
+build/
+nbbuild/
+>>>>>>> origin/main
 dist/
 nbdist/
 nbactions.xml

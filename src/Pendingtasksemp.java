@@ -1,3 +1,6 @@
+
+import javax.swing.JComboBox;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -7,31 +10,15 @@
  *
  * @author San
  */
-public class EmployerDashboard extends javax.swing.JFrame {
-  Employer employer = null;
-  String[] options = {"this.employer.firstName", "Logout"};
-    /**
-     * Creates new form EmployerDashboard
-     */
-    public EmployerDashboard(){
-        this.initComponents();
-        this.initProfile();
-        this.initMyMethods();
-    }   
+public class Pendingtasksemp extends javax.swing.JFrame {
 
-    
-    public void initProfile(){
-       
+    /**
+     * Creates new form NewJFrame
+     */
+    public Pendingtasksemp() {
+        initComponents();
     }
-    public void initMyMethods(){
-        
-        
-        jComboBoxProfile.setSelectedIndex(0);
-        jComboBoxProfile.setModel(new javax.swing.DefaultComboBoxModel<>(options));
-   
-        
-    }
-   
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,8 +28,7 @@ public class EmployerDashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        jComboBoxProfile = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
@@ -52,27 +38,19 @@ public class EmployerDashboard extends javax.swing.JFrame {
         btnPendingTasks = new javax.swing.JButton();
         btnMyWriters = new javax.swing.JButton();
         btnProfile = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        btnAssignTask = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jComboBoxProfile = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jComboBoxProfile1 = new javax.swing.JComboBox<>();
 
-        jLabel2.setText("jLabel2");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jComboBoxProfile.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jComboBoxProfile.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employer" }));
+        jComboBoxProfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxProfileActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel5.setBackground(new java.awt.Color(12, 28, 59));
 
@@ -117,21 +95,11 @@ public class EmployerDashboard extends javax.swing.JFrame {
         btnPendingTasks.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnPendingTasks.setForeground(new java.awt.Color(255, 255, 255));
         btnPendingTasks.setText("PENDING ");
-        btnPendingTasks.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPendingTasksActionPerformed(evt);
-            }
-        });
 
         btnMyWriters.setBackground(new java.awt.Color(0, 51, 255));
         btnMyWriters.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnMyWriters.setForeground(new java.awt.Color(255, 255, 255));
         btnMyWriters.setText("MY WRITERS");
-        btnMyWriters.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMyWritersActionPerformed(evt);
-            }
-        });
 
         btnProfile.setBackground(new java.awt.Color(0, 51, 255));
         btnProfile.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -182,67 +150,28 @@ public class EmployerDashboard extends javax.swing.JFrame {
                 .addComponent(btnMyWriters)
                 .addGap(18, 18, 18)
                 .addComponent(btnProfile)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setForeground(new java.awt.Color(255, 255, 255));
-
-        btnAssignTask.setBackground(new java.awt.Color(0, 51, 255));
-        btnAssignTask.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        btnAssignTask.setForeground(new java.awt.Color(255, 255, 255));
-        btnAssignTask.setText("ASSIGN TASKS");
-        btnAssignTask.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignTaskActionPerformed(evt);
+        jTable1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"0001", "Economics", "Macroeconomics", "2", "600", "5hrs"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Order Id", "Subject", "Topic", "No of Pages", "Budget", "Duration"
             }
-        });
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setText("PENDING SUBMISSIONS");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBoxProfile1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jComboBoxProfile1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employer", "Logout", " " }));
+        jComboBoxProfile1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("SUBMITTED");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(btnAssignTask)
-                .addContainerGap(195, Short.MAX_VALUE))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(btnAssignTask)
-                .addGap(65, 65, 65)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
-
-        jComboBoxProfile.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employer" }));
-        jComboBoxProfile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxProfileActionPerformed(evt);
+                jComboBoxProfile1ActionPerformed(evt);
             }
         });
 
@@ -251,37 +180,39 @@ public class EmployerDashboard extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 12, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addComponent(jComboBoxProfile, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jComboBoxProfile1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jComboBoxProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jComboBoxProfile1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(95, 95, 95))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBoxProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxProfileActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxProfileActionPerformed
-
-    private void btnAssignTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignTaskActionPerformed
-        // directs you to assign task
+    private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
+        //Directs the employer to the dashboard
         this.setVisible(false);
-        Assigntask assigntask = new Assigntask();
-        assigntask.setVisible(true);
-    }//GEN-LAST:event_btnAssignTaskActionPerformed
+        EmployerDashboard empdboard = new EmployerDashboard();
+        empdboard.setVisible(true);
+    }//GEN-LAST:event_btnDashboardActionPerformed
+
+    private void btnSubmittedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmittedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSubmittedActionPerformed
 
     private void btnAssignTaskMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignTaskMenuActionPerformed
         // directs you to assigntask
@@ -297,41 +228,20 @@ public class EmployerDashboard extends javax.swing.JFrame {
         profile.setVisible(true);
     }//GEN-LAST:event_btnProfileActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jComboBoxProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxProfileActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jComboBoxProfileActionPerformed
 
-    private void btnSubmittedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmittedActionPerformed
-        //directs the employer to the submitted task tab
-        this.setVisible(false);
-        Submittedtasks submittask = new Submittedtasks();
-        submittask.setVisible(true);
-    }//GEN-LAST:event_btnSubmittedActionPerformed
-
-    private void btnMyWritersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMyWritersActionPerformed
-        //directs the employer to the writers under them
-        this.setVisible(false);
-        Mywriters empwriters = new Mywriters();
-        empwriters.setVisible(true);
-    }//GEN-LAST:event_btnMyWritersActionPerformed
-
-    private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
-        // directs the employer back to the dashboard
-        this.setVisible(false);
-        EmployerDashboard empdboard = new EmployerDashboard();
-        empdboard.setVisible(true);
-    }//GEN-LAST:event_btnDashboardActionPerformed
-
-    private void btnPendingTasksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPendingTasksActionPerformed
-        // Directs the employer to the pending tasks
-        this.setVisible(false);
-        Pendingtasksemp pending = new Pendingtasksemp();
-        pending.setVisible(true);
-    }//GEN-LAST:event_btnPendingTasksActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Directs 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jComboBoxProfile1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxProfile1ActionPerformed
+        // displays the employer profile and enables them to log out.
+         JComboBox cb = (JComboBox) evt.getSource();
+         int option = cb.getSelectedIndex();
+         if (option==1){
+             this.setVisible(false);
+             EmployerLogin login = new EmployerLogin();
+             login.setVisible(true);
+         }
+    }//GEN-LAST:event_jComboBoxProfile1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -350,40 +260,38 @@ public class EmployerDashboard extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EmployerDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pendingtasksemp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EmployerDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pendingtasksemp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EmployerDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pendingtasksemp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EmployerDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Pendingtasksemp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EmployerDashboard().setVisible(true);
+                new Pendingtasksemp().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssignTask;
     private javax.swing.JButton btnAssignTaskMenu;
     private javax.swing.JButton btnDashboard;
     private javax.swing.JButton btnMyWriters;
     private javax.swing.JButton btnPendingTasks;
     private javax.swing.JButton btnProfile;
     private javax.swing.JButton btnSubmitted;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JComboBox<String> jComboBoxProfile;
+    private javax.swing.JComboBox<String> jComboBoxProfile1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
