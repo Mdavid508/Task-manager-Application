@@ -1,3 +1,8 @@
+
+import javax.swing.JComboBox;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -9,29 +14,33 @@
  */
 public class EmployerDashboard extends javax.swing.JFrame {
   Employer employer = null;
-  String[] options = {"this.employer.firstName", "Logout"};
+  String[] options;
     /**
      * Creates new form EmployerDashboard
      */
     public EmployerDashboard(){
         this.initComponents();
         this.initProfile();
-        this.initMyMethods();
-    }   
-
+    }
+    
+    Logger logger = Logger.getLogger(EmployerDashboard.class.getName());
+    //setter methods
+    public void setEmployer(Employer employer){
+        this.employer = employer;
+    }
+    public void setOptions(String[] options){
+        this.options = options;
+    }
+    
     
     public void initProfile(){
        
     }
-    public void initMyMethods(){
-        
-        
-        jComboBoxProfile.setSelectedIndex(0);
+    
+    public void initMyMethods(){     
         jComboBoxProfile.setModel(new javax.swing.DefaultComboBoxModel<>(options));
-   
-        
+        jComboBoxProfile.setSelectedIndex(0);
     }
-   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -101,7 +110,7 @@ public class EmployerDashboard extends javax.swing.JFrame {
         btnPendingTasks.setBackground(new java.awt.Color(0, 51, 255));
         btnPendingTasks.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnPendingTasks.setForeground(new java.awt.Color(255, 255, 255));
-        btnPendingTasks.setText("PENDING TASKS");
+        btnPendingTasks.setText("PENDING ");
 
         btnMyWriters.setBackground(new java.awt.Color(0, 51, 255));
         btnMyWriters.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -119,25 +128,20 @@ public class EmployerDashboard extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(jLabel1))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btnAssignTaskMenu)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnProfile, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnPendingTasks, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnSubmitted, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnMyWriters, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(16, 16, 16))
+                .addGap(15, 15, 15)
+                .addComponent(jLabel1)
+                .addGap(28, 28, 28))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(btnAssignTaskMenu)
+                        .addContainerGap(38, Short.MAX_VALUE))
+                    .addComponent(btnProfile, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPendingTasks, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSubmitted, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnMyWriters, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +257,14 @@ public class EmployerDashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBoxProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxProfileActionPerformed
-        // TODO add your handling code here:
+        //listen for logout
+        JComboBox cb = (JComboBox) evt.getSource();
+        int option = cb.getSelectedIndex();
+        if(option == 1){
+          //logout the user
+          this.setVisible(false);
+          new EmployerLogin().setVisible(true);
+        }
     }//GEN-LAST:event_jComboBoxProfileActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -268,11 +279,7 @@ public class EmployerDashboard extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -290,7 +297,10 @@ public class EmployerDashboard extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EmployerDashboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        EmployerDashboard dashboard = new EmployerDashboard();
+        
+        
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

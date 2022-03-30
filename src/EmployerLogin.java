@@ -7,6 +7,8 @@ import java.util.logging.Logger;
 import java.util.logging.Level;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 /*
@@ -200,9 +202,18 @@ public class EmployerLogin extends javax.swing.JFrame {
                this.setVisible(false);
                //move to employer page
                EmployerDashboard dashboard = new EmployerDashboard();
-               Employer emp = dashboard.employer;
-               emp.firstName=rs.getString("first_name");
-               emp.lastName = rs.getString("last_name");
+               Employer employer = new Employer();
+               
+               employer.firstName=rs.getString("first_name");
+               employer.lastName = rs.getString("last_name");
+               employer.email = rs.getString("email");
+               employer.phone = rs.getString("phone");
+               
+               String[] options = {employer.firstName, "Logout"};
+               dashboard.setOptions(options);
+               dashboard.setEmployer(employer);
+               
+               dashboard.initMyMethods();
                dashboard.setVisible(true);
                
                return;
