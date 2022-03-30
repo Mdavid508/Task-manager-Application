@@ -1,3 +1,6 @@
+
+import javax.swing.JComboBox;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -26,6 +29,9 @@ public class writersrevision extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
         jPanel1 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -34,14 +40,41 @@ public class writersrevision extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
 
         jLabel3.setText("jLabel3");
+
+        jTable1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"0001", "Economics", "Macroeconomics", "2", "600", "5hrs"},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Order Id", "Subject", "Topic", "No of Pages", "Budget", "Duration"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,6 +125,11 @@ public class writersrevision extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton6.setForeground(new java.awt.Color(242, 242, 242));
         jButton6.setText("COMPLETED");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setBackground(new java.awt.Color(45, 43, 177));
         jButton7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
@@ -142,6 +180,15 @@ public class writersrevision extends javax.swing.JFrame {
                 .addGap(0, 39, Short.MAX_VALUE))
         );
 
+        jTextField1.setText("4500");
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel1.setText("Balance :KES");
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel2.setText("Revision");
+
+        jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Writer ", "Logout", " ", " " }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,15 +196,8 @@ public class writersrevision extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("4500");
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jLabel1.setText("Balance :KES");
-
-        jLabel2.setText("Revision");
-
-        jTable1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"0001", "Economics", "Macroeconomics", "2", "600", "5hrs"},
                 {null, null, null, null, null, null},
@@ -168,7 +208,7 @@ public class writersrevision extends javax.swing.JFrame {
                 "Order Id", "Subject", "Topic", "No of Pages", "Budget", "Duration"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -182,17 +222,17 @@ public class writersrevision extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(176, 176, 176)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 18, Short.MAX_VALUE))))
+                        .addGap(176, 176, 176)
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,13 +241,13 @@ public class writersrevision extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
+                            .addComponent(jLabel1)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(26, 26, 26)
                         .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(41, 41, 41)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -250,8 +290,22 @@ public class writersrevision extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
+        // logsout the writer
+        JComboBox cb = (JComboBox) evt.getSource();
+        int option = cb.getSelectedIndex();
+        if (option==1){
+            this.setVisible(false);
+            WriterLogin login = new WriterLogin();
+            login.setVisible(true);
+        }
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // Directs the writer to the Completed tasks dashboard
+        this.setVisible(false);
+        Completedwriter complete = new Completedwriter();
+         complete.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,13 +350,16 @@ public class writersrevision extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

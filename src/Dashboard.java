@@ -1,3 +1,6 @@
+
+import javax.swing.JComboBox;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -36,11 +39,11 @@ public class Dashboard extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
@@ -111,6 +114,11 @@ public class Dashboard extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton6.setForeground(new java.awt.Color(242, 242, 242));
         jButton6.setText("COMPLETED");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton7.setBackground(new java.awt.Color(45, 43, 177));
         jButton7.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
@@ -133,11 +141,11 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -163,56 +171,48 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
-        jButton14.setBackground(new java.awt.Color(153, 153, 153));
-        jButton14.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jButton14.setText("English");
-
-        jButton15.setBackground(new java.awt.Color(153, 153, 153));
-        jButton15.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jButton15.setText("Literature");
-
-        jButton16.setBackground(new java.awt.Color(153, 153, 153));
-        jButton16.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jButton16.setText("Programming");
-
-        jButton17.setBackground(new java.awt.Color(153, 153, 153));
-        jButton17.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        jButton17.setText("Humanities");
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Subjects");
+
+        jLabel5.setText("English");
+
+        jLabel6.setText("Literature");
+
+        jLabel7.setText("Programming");
+
+        jLabel8.setText("Humanities");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton14)
-                .addGap(68, 68, 68)
-                .addComponent(jButton15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton16)
-                .addGap(70, 70, 70)
-                .addComponent(jButton17)
-                .addGap(15, 15, 15))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(jLabel7)
+                .addGap(66, 66, 66)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(240, 240, 240)
+                .addGap(222, 222, 222)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14)
-                    .addComponent(jButton15)
-                    .addComponent(jButton16)
-                    .addComponent(jButton17))
-                .addGap(40, 40, 40))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8))
+                .addGap(41, 41, 41))
         );
 
         jButton10.setBackground(new java.awt.Color(45, 43, 177));
@@ -239,11 +239,21 @@ public class Dashboard extends javax.swing.JFrame {
         jButton12.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton12.setForeground(new java.awt.Color(242, 242, 242));
         jButton12.setText("COMPLETED 12");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jButton13.setBackground(new java.awt.Color(45, 43, 177));
         jButton13.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         jButton13.setForeground(new java.awt.Color(242, 242, 242));
         jButton13.setText("REVISION 2");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -323,10 +333,11 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -400,8 +411,36 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
+        // logsout the writer
+        JComboBox cb = (JComboBox) evt.getSource();
+         int option = cb.getSelectedIndex();
+         if (option==1){
+             this.setVisible(false);
+             WriterLogin login = new WriterLogin();
+             login.setVisible(true);
+         }
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // Directs the writer to the Completed tasks dashboard
+        this.setVisible(false);
+        Completedwriter complete = new Completedwriter();
+         complete.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        //  Directs the writer to the Completed tasks dashboard
+        this.setVisible(false);
+        Completedwriter complete = new Completedwriter();
+         complete.setVisible(true);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        //  this directs the writer to revision 
+        this.setVisible(false);
+        writersrevision revision = new writersrevision();
+        revision.setVisible(true);
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -444,10 +483,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -460,6 +495,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

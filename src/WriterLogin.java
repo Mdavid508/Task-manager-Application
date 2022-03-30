@@ -43,7 +43,8 @@ public class WriterLogin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         JTpassword = new javax.swing.JPasswordField();
         JTemail = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,8 +84,29 @@ public class WriterLogin extends javax.swing.JFrame {
             }
         });
 
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("WRITERS REGISTRATION");
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("WRITERS LOGIN");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -101,8 +123,8 @@ public class WriterLogin extends javax.swing.JFrame {
                         .addGap(112, 112, 112))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(87, 87, 87)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -116,8 +138,8 @@ public class WriterLogin extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -130,7 +152,7 @@ public class WriterLogin extends javax.swing.JFrame {
                 .addComponent(btnLogin)
                 .addGap(18, 18, 18)
                 .addComponent(btnRegister)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -244,7 +266,8 @@ public class WriterLogin extends javax.swing.JFrame {
     private javax.swing.JButton btnRegister;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

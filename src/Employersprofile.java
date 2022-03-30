@@ -127,7 +127,7 @@ public class Employersprofile extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("TASK MANAGER");
 
-        btnMyWriters.setBackground(new java.awt.Color(0, 51, 255));
+        btnMyWriters.setBackground(new java.awt.Color(45, 43, 177));
         btnMyWriters.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnMyWriters.setForeground(new java.awt.Color(255, 255, 255));
         btnMyWriters.setText("MY WRITERS");
@@ -137,7 +137,7 @@ public class Employersprofile extends javax.swing.JFrame {
             }
         });
 
-        btnProfile.setBackground(new java.awt.Color(0, 51, 255));
+        btnProfile.setBackground(new java.awt.Color(45, 43, 177));
         btnProfile.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnProfile.setForeground(new java.awt.Color(255, 255, 255));
         btnProfile.setText("PROFILE");
