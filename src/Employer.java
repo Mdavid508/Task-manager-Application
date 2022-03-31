@@ -1,4 +1,5 @@
 
+import java.util.HashMap;
 import java.util.Map;
 
 /*
@@ -11,18 +12,10 @@ import java.util.Map;
  * @author joseph
  */
 public class Employer {
-    public Map employer;
-    public String firstName="Joseph";
+    public String firstName;
     public String lastName;
-    public String email;
+    public String email ;
     public String phone;
     
-    public Employer(Map<String, String> employer){
-        this.employer = employer;
-    }
-    
-    public Map getData(){
-        return this.employer;
-    }
-    
+  
 }

@@ -25,16 +25,46 @@ dependency-reduced-pom.xml
 ##########################
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+nbproject/private/
+/nbproject
+build/
+nbbuild/
+||||||| d62bd82
+nbproject/private/
+build/
+nbbuild/
+=======
+||||||| merged common ancestors
+<<<<<<<<< Temporary merge branch 1
+nbproject/private/
+/nbproject
+build/
+nbbuild/
+||||||||| d62bd82
+nbproject/private/
+build/
+nbbuild/
+=========
+=======
+<<<<<<< HEAD
+>>>>>>> origin/feature_assign_task
 /nbproject/private/
 /nbproject/
 /build/
 /nbbuild/
+<<<<<<< HEAD
+>>>>>>> origin/feature_assign_task
+||||||| merged common ancestors
+>>>>>>>>> Temporary merge branch 2
+=======
 =======
 nbproject/private/
 /nbproject
 build/
 nbbuild/
 >>>>>>> origin/main
+>>>>>>> origin/feature_assign_task
 dist/
 nbdist/
 nbactions.xml
