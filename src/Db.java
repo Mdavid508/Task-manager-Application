@@ -23,7 +23,7 @@ public class Db {
     this.tableName = tableName;
     
       try {         
-          this.conn = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3307/taskmanager","root", "");
+          this.conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/taskmanager","root", "");
 
       } catch (SQLException ex) {
           Logger.getLogger(Db.class.getName()).log(Level.SEVERE, null, ex);
