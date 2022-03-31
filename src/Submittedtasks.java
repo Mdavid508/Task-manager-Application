@@ -83,7 +83,7 @@ public class Submittedtasks extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("TASK MANAGER");
 
-        btnDashboard.setBackground(new java.awt.Color(0, 51, 255));
+        btnDashboard.setBackground(new java.awt.Color(45, 43, 177));
         btnDashboard.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnDashboard.setForeground(new java.awt.Color(255, 255, 255));
         btnDashboard.setText("DASHBOARD");
@@ -93,7 +93,7 @@ public class Submittedtasks extends javax.swing.JFrame {
             }
         });
 
-        btnSubmitted.setBackground(new java.awt.Color(0, 51, 255));
+        btnSubmitted.setBackground(new java.awt.Color(45, 43, 177));
         btnSubmitted.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnSubmitted.setForeground(new java.awt.Color(255, 255, 255));
         btnSubmitted.setText("SUBMITTED");
@@ -103,7 +103,7 @@ public class Submittedtasks extends javax.swing.JFrame {
             }
         });
 
-        btnAssignTaskMenu.setBackground(new java.awt.Color(0, 51, 255));
+        btnAssignTaskMenu.setBackground(new java.awt.Color(45, 43, 177));
         btnAssignTaskMenu.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnAssignTaskMenu.setForeground(new java.awt.Color(255, 255, 255));
         btnAssignTaskMenu.setText("ASSIGN TASKS");
@@ -113,17 +113,17 @@ public class Submittedtasks extends javax.swing.JFrame {
             }
         });
 
-        btnPendingTasks.setBackground(new java.awt.Color(0, 51, 255));
+        btnPendingTasks.setBackground(new java.awt.Color(45, 43, 177));
         btnPendingTasks.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnPendingTasks.setForeground(new java.awt.Color(255, 255, 255));
         btnPendingTasks.setText("PENDING ");
 
-        btnMyWriters.setBackground(new java.awt.Color(0, 51, 255));
+        btnMyWriters.setBackground(new java.awt.Color(45, 43, 177));
         btnMyWriters.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnMyWriters.setForeground(new java.awt.Color(255, 255, 255));
         btnMyWriters.setText("MY WRITERS");
 
-        btnProfile.setBackground(new java.awt.Color(0, 51, 255));
+        btnProfile.setBackground(new java.awt.Color(45, 43, 177));
         btnProfile.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnProfile.setForeground(new java.awt.Color(255, 255, 255));
         btnProfile.setText("PROFILE");

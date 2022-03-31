@@ -125,7 +125,7 @@ public class Assigntask extends javax.swing.JFrame {
             }
         });
 
-        btnMyWriters.setBackground(new java.awt.Color(0, 51, 255));
+        btnMyWriters.setBackground(new java.awt.Color(45, 43, 177));
         btnMyWriters.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnMyWriters.setForeground(new java.awt.Color(255, 255, 255));
         btnMyWriters.setText("MY WRITERS");
