@@ -28,10 +28,11 @@ public class Completedwriter extends javax.swing.JFrame {
      */
     public Completedwriter() {
         initComponents();
+        this.completedTask();
     }
     
   private void completedTask (){
-         jTbalance.setText("300");
+         
               int CC;
 //               String balance = balance.getText();
               
@@ -50,8 +51,8 @@ public class Completedwriter extends javax.swing.JFrame {
                   DFT.setRowCount(0);
                     while (Rs.next()) 
                     {
-//                      JOptionPane.showMessageDialog(this, Rs.getString("amount"));
-                        
+//                    JOptionPane.showMessageDialog(this, Rs.getString("amount"));
+                        jTbalance.setText(Rs.getString("amount"));
                   Vector v2 = new Vector();
                   for (int ii = 1; ii <= CC; ii++){
                       v2.add(Rs.getString("id"));
@@ -295,12 +296,12 @@ public class Completedwriter extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(191, 191, 191)
+                                .addGap(185, 185, 185)
                                 .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
+                                .addGap(30, 30, 30)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 41, Short.MAX_VALUE))))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,7 +311,7 @@ public class Completedwriter extends javax.swing.JFrame {
                 .addGap(42, 42, 42)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -376,7 +377,7 @@ public class Completedwriter extends javax.swing.JFrame {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
          Completedwriter completedTask=new Completedwriter(); 
-         completedTask.completedTask();
+//         completedTask.completedTask();
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 

@@ -1,5 +1,14 @@
 
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JComboBox;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -18,6 +27,48 @@ public class Employersprofile extends javax.swing.JFrame {
     public Employersprofile() {
         initComponents();
     }
+        
+    
+  private void profile(){
+         
+              int CC;
+//               String balance = balance.getText();
+              
+              String sql="SELECT * FROM tasks";
+              Connection conn = new Db("tasks").getConnection();
+              try {
+                  PreparedStatement stmt = (PreparedStatement) conn.prepareStatement(sql);
+             
+              
+              ResultSet Rs = stmt.executeQuery();
+              ResultSetMetaData RSMD;
+              try {
+                  RSMD = Rs.getMetaData();
+//                   DefaultTableModel DFT = (DefaultTableModel) jTid.getText();
+//                  DFT.setRowCount(0);
+                    while (Rs.next()) 
+                    {
+//                    JOptionPane.showMessageDialog(this, Rs.getString("amount"));
+                    
+                  Vector v2 = new Vector();
+                 
+                      v2.add(Rs.getString("id"));
+                    
+                  
+                  
+              }
+              } catch (SQLException ex) {
+                  Logger.getLogger(Completedwriter.class.getName()).log(Level.SEVERE, null, ex);
+              }
+              
+              
+              
+            
+          
+  }     catch (SQLException ex) {
+            Logger.getLogger(Completedwriter.class.getName()).log(Level.SEVERE, null, ex);
+  }
+  }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,7 +100,7 @@ public class Employersprofile extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jTid = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -157,7 +208,7 @@ public class Employersprofile extends javax.swing.JFrame {
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -253,9 +304,9 @@ public class Employersprofile extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(102, 0, 204));
         jLabel4.setText("Unique Id");
 
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jTid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jTidActionPerformed(evt);
             }
         });
 
@@ -303,7 +354,7 @@ public class Employersprofile extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jLabel6)
                     .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jTextField6)
+                    .addComponent(jTid)
                     .addComponent(jTextField7)
                     .addComponent(jTextField8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -331,7 +382,7 @@ public class Employersprofile extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -447,9 +498,9 @@ public class Employersprofile extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jTidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTidActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jTidActionPerformed
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
@@ -570,9 +621,9 @@ public class Employersprofile extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTid;
     // End of variables declaration//GEN-END:variables
 }

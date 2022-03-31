@@ -1,7 +1,14 @@
 
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.PreparedStatement;
 import java.io.File;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -19,8 +26,28 @@ public class Submittaskwriter extends javax.swing.JFrame {
      */
     public Submittaskwriter() {
         initComponents();
+        this.getMyTasks();
     }
 
+       public void getMyTasks(){
+           Connection conn = new Db("tasks").getConnection();
+           String sql = "SELECT tasks.id as task_id, tasks.topic, users.* FROM users "
+                   + "INNER JOIN tasks ON users.id = tasks.writer_id "
+                   +"WHERE users.id=?";
+        try {
+            PreparedStatement stmt = (PreparedStatement) conn.prepareStatement(sql);
+            stmt.setString(1, "4");
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next()){
+                jCtasks.addItem(rs.getString("task_id")+"-"+rs.getString("topic"));
+                JOptionPane.showMessageDialog(this, rs.getString("first_name"));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Submittaskwriter.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           
+           
+       }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -43,7 +70,7 @@ public class Submittaskwriter extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jCtasks = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -172,7 +199,7 @@ public class Submittaskwriter extends javax.swing.JFrame {
 
         jLabel1.setText("select task *");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1201  Java Task", "1202 Essays", " " }));
+        jCtasks.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1201  Java Task", "1202 Essays", " " }));
 
         jLabel6.setText("Description ");
 
@@ -200,7 +227,7 @@ public class Submittaskwriter extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jCtasks, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldfile, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -241,7 +268,7 @@ public class Submittaskwriter extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCtasks, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -360,7 +387,7 @@ public class Submittaskwriter extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jCtasks;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
