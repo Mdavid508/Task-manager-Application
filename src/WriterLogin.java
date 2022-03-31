@@ -191,8 +191,9 @@ public class WriterLogin extends javax.swing.JFrame {
                JTpassword.setText("");
                this.setVisible(false);
                //move to writer dashboard
-               Dashboard dashboard = new Dashboard();
-               
+               Completedwriter dashboard = new Completedwriter();
+               dashboard.setWriterId(rs.getString("id"));
+               dashboard.completedTask();
                dashboard.setVisible(true);
                
                return;

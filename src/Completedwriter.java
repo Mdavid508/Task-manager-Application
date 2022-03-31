@@ -22,21 +22,27 @@ import javax.swing.table.DefaultTableModel;
  * @author kim
  */
 public class Completedwriter extends javax.swing.JFrame {
+  public String writerId;
 
     /**
      * Creates new form Completedwriter
      */
     public Completedwriter() {
         initComponents();
-        this.completedTask();
+//        this.completedTask();
     }
-    
-  private void completedTask (){
-         
+    public void setWriterId(String writerId){
+        this.writerId = writerId;
+    }
+    public void initMyMethods(){
+        
+    }
+  public void completedTask (){
+//         jTbalance.setText("300");
               int CC;
 //               String balance = balance.getText();
               
-              String sql="SELECT * FROM tasks";
+              String sql="SELECT * FROM tasks WHERE id ="+this.writerId;
               Connection conn = new Db("tasks").getConnection();
               try {
                   PreparedStatement stmt = (PreparedStatement) conn.prepareStatement(sql);
