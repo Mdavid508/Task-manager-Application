@@ -254,7 +254,7 @@ public class Mywriters extends javax.swing.JFrame {
         int option = cb.getSelectedIndex();
         if (option==1){
             this.setVisible(false);
-            EmployerLogin login = new EmployerLogin();
+            taskmanagerdashboard login = new taskmanagerdashboard();
             login.setVisible(true);
         }
     }//GEN-LAST:event_jComboBoxProfile1ActionPerformed

@@ -208,15 +208,15 @@ public class WriterLogin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnLoginActionPerformed
 
+    private void JTemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTemailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTemailActionPerformed
+
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         //redirect to register
         this.setVisible(false);
         new WriterRegistration().setVisible(true);
     }//GEN-LAST:event_btnRegisterActionPerformed
-
-    private void JTemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTemailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JTemailActionPerformed
 
     /**
      * @param args the command line arguments

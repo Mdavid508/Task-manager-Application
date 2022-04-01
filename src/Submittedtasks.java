@@ -122,6 +122,11 @@ public class Submittedtasks extends javax.swing.JFrame {
         btnMyWriters.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnMyWriters.setForeground(new java.awt.Color(255, 255, 255));
         btnMyWriters.setText("MY WRITERS");
+        btnMyWriters.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMyWritersActionPerformed(evt);
+            }
+        });
 
         btnProfile.setBackground(new java.awt.Color(45, 43, 177));
         btnProfile.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
@@ -309,10 +314,17 @@ public class Submittedtasks extends javax.swing.JFrame {
         int option = cb.getSelectedIndex();
         if (option==1){
             this.setVisible(false);
-            EmployerLogin login = new EmployerLogin();
+            taskmanagerdashboard login = new taskmanagerdashboard();
             login.setVisible(true);
         }
     }//GEN-LAST:event_jComboBoxProfile1ActionPerformed
+
+    private void btnMyWritersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMyWritersActionPerformed
+         //directs the employer to the writers under them
+        this.setVisible(false);
+        Mywriters empwriters = new Mywriters();
+        empwriters.setVisible(true);
+    }//GEN-LAST:event_btnMyWritersActionPerformed
 
     /**
      * @param args the command line arguments

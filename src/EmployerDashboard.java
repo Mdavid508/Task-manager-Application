@@ -301,7 +301,7 @@ public class EmployerDashboard extends javax.swing.JFrame {
         if(option == 1){
           //logout the user
           this.setVisible(false);
-          new EmployerLogin().setVisible(true);
+          new taskmanagerdashboard().setVisible(true);
         }
     }//GEN-LAST:event_jComboBoxProfileActionPerformed
 

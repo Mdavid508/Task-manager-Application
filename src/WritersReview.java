@@ -408,7 +408,7 @@ public class WritersReview extends javax.swing.JFrame {
         int option = cb.getSelectedIndex();
         if (option==1){
             this.setVisible(false);
-            WriterLogin login = new WriterLogin();
+            taskmanagerdashboard login = new taskmanagerdashboard();
             login.setVisible(true);
         }
     }//GEN-LAST:event_jComboBox3ActionPerformed

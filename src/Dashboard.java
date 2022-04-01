@@ -11,12 +11,16 @@ import javax.swing.JComboBox;
  * @author ELITEBOOK
  */
 public class Dashboard extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form Dashboard
      */
     public Dashboard() {
         initComponents();
+    }
+    public void setWriterId(String writerId){
+        
     }
 
     /**
@@ -416,7 +420,7 @@ public class Dashboard extends javax.swing.JFrame {
          int option = cb.getSelectedIndex();
          if (option==1){
              this.setVisible(false);
-             WriterLogin login = new WriterLogin();
+             taskmanagerdashboard login = new taskmanagerdashboard();
              login.setVisible(true);
          }
     }//GEN-LAST:event_jComboBox1ActionPerformed

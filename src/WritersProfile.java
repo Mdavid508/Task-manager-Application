@@ -578,7 +578,10 @@ public class WritersProfile extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
+        //directs writer to the taskmanager dashboard
+        this.setVisible(false);
+            taskmanagerdashboard login = new taskmanagerdashboard();
+            login.setVisible(true);
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     /**
