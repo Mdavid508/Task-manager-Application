@@ -22,20 +22,27 @@ import javax.swing.table.DefaultTableModel;
  * @author kim
  */
 public class Completedwriter extends javax.swing.JFrame {
+  public String writerId;
 
     /**
      * Creates new form Completedwriter
      */
     public Completedwriter() {
         initComponents();
+//        this.completedTask();
     }
-    
-  private void completedTask (){
-         jTbalance.setText("300");
+    public void setWriterId(String writerId){
+        this.writerId = writerId;
+    }
+    public void initMyMethods(){
+        
+    }
+  public void completedTask (){
+//         jTbalance.setText("300");
               int CC;
 //               String balance = balance.getText();
               
-              String sql="SELECT * FROM tasks";
+              String sql="SELECT * FROM tasks WHERE id ="+this.writerId;
               Connection conn = new Db("tasks").getConnection();
               try {
                   PreparedStatement stmt = (PreparedStatement) conn.prepareStatement(sql);
@@ -376,7 +383,7 @@ public class Completedwriter extends javax.swing.JFrame {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
          Completedwriter completedTask=new Completedwriter(); 
-         completedTask.completedTask();
+//         completedTask.completedTask();
 //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 

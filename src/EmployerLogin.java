@@ -202,6 +202,7 @@ public class EmployerLogin extends javax.swing.JFrame {
                EmployerDashboard dashboard = new EmployerDashboard();
                Employer employer = new Employer();
                
+               dashboard.setEmployerId(rs.getString("id"));
                employer.firstName=rs.getString("first_name");
                employer.lastName = rs.getString("last_name");
                employer.email = rs.getString("email");
@@ -212,6 +213,7 @@ public class EmployerLogin extends javax.swing.JFrame {
                dashboard.setEmployer(employer);
                
                dashboard.initMyMethods();
+               
                dashboard.setVisible(true);
                
                return;
